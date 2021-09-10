@@ -5,9 +5,8 @@ export class CounterClass extends React.Component {
     number: 5
   }
 
-  setNumber = (newNumber) => {
-    this.setState(() => ({ number: newNumber }))
-  }
+  inc = () => this.setState((prevState) => ({ number: prevState.number + 1 }))
+  dec = () => this.setState((prevState) => ({ number: prevState.number - 1 }))
 
   render () {
     const { number } = this.state
@@ -18,12 +17,12 @@ export class CounterClass extends React.Component {
           {number}
         </h1>
         <button
-          onClick={() => this.setNumber(number + 1)}
+          onClick={this.inc}
         >
           +
         </button>
         <button
-          onClick={() => this.setNumber(number - 1)}
+          onClick={this.dec}
         >
           -
         </button>
