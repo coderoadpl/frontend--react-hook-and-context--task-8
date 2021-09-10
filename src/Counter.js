@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
 
 export const Counter = () => {
-  const returnValue = useState(0)
+  const returnValue = useState(5)
 
-  console.log(returnValue)
+  const currentState = returnValue[0]
+  const setCurrentState = returnValue[1]
+
+  console.log(currentState, setCurrentState)
+
+  window.setCurrentState = setCurrentState
 
   return (
     <div>
       <h1>
-        0
+        {currentState}
       </h1>
       <button
         onClick={console.log}
