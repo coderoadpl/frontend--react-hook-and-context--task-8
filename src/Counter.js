@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
 
 export const Counter = () => {
-  const [currentState, setCurrentState] = useState(5)
+  const [number, setNumber] = useState(5)
 
-  console.log(currentState, setCurrentState)
-
-  window.setCurrentState = setCurrentState
+  console.log('RENDER')
 
   return (
     <div>
       <h1>
-        {currentState}
+        {number}
       </h1>
       <button
-        onClick={console.log}
+        onClick={() => setNumber((prevValue) => prevValue + 1)}
       >+
       </button>
     </div>
