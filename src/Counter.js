@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 
 export const Counter = () => {
-  const returnValue = useState(5)
-
-  const currentState = returnValue[0]
-  const setCurrentState = returnValue[1]
+  const [currentState, setCurrentState] = useState(5)
 
   console.log(currentState, setCurrentState)
 
