@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Counter = () => {
+  const returnValue = useState(0)
+
+  console.log(returnValue)
+
   return (
     <div>
       <h1>
