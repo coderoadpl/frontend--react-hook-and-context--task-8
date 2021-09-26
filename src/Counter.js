@@ -1,10 +1,13 @@
 import React from 'react'
 
-export const Counter = () => {
-  const [number, setNumber] = React.useState(5)
+import { useCounter } from './useCounter'
 
-  const inc = () => setNumber(number + 1)
-  const dec = function () { setNumber(number - 1) }
+export const Counter = () => {
+  const {
+    number,
+    inc,
+    dec
+  } = useCounter()
 
   return (
     <>
