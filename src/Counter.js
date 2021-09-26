@@ -12,9 +12,14 @@ export const Counter = (props) => {
     dec
   } = useCounter(startNumber)
 
+  // this is like componentDidMount
+  React.useEffect(() => {
+    console.log('useEffect - componentDidMount')
+  }, [])
+
   // this is like to componentDidMount and componentDidUpdate
   React.useEffect(() => {
-    console.log('useEffect')
+    console.log('useEffect - componentDidMount and componentDidUpdate')
   })
 
   console.log('RENDER')

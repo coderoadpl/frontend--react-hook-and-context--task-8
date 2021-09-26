@@ -10,16 +10,16 @@ export const App = () => {
         Hooks
       </h2>
       <Counter />
-      <Counter
+      {/* <Counter
         startNumber={3}
-      />
+      /> */}
       <h2>
         Class
       </h2>
       <CounterClass />
-      <CounterClass
+      {/* <CounterClass
         startNumber={3}
-      />
+      /> */}
     </div>
   )
 }
