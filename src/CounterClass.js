@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { inc, dec, makeInitialState } from './counterClass.logic'
+
 export class CounterClass extends React.Component {
   constructor (props) {
     super()
 
-    this.state = {
-      number: props.startNumber || 0
-    }
-  }
+    this.state = makeInitialState(props)
 
-  inc = () => this.setState((prevState) => ({ number: prevState.number + 1 }))
-  dec = () => this.setState((prevState) => ({ number: prevState.number - 1 }))
+    this.inc = inc.bind(this)
+    this.dec = dec.bind(this)
+  }
 
   render () {
     const { number } = this.state
