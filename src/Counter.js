@@ -1,13 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { useCounter } from './useCounter'
 
-export const Counter = () => {
+export const Counter = (props) => {
+  const { startNumber } = props
+
   const {
     number,
     inc,
     dec
-  } = useCounter()
+  } = useCounter(startNumber)
 
   return (
     <>
@@ -26,6 +29,10 @@ export const Counter = () => {
       </button>
     </>
   )
+}
+
+Counter.propTypes = {
+  startNumber: PropTypes.number
 }
 
 export default Counter

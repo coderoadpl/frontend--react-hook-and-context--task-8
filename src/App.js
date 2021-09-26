@@ -10,7 +10,9 @@ export const App = () => {
         Hooks
       </h2>
       <Counter />
-      <Counter />
+      <Counter
+        startNumber={3}
+      />
       <h2>
         Class
       </h2>
