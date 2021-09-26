@@ -26,6 +26,14 @@ export const Counter = (props) => {
     console.log('useEffect - componentDidMount and componentDidUpdate')
   })
 
+  React.useEffect(() => {
+    if (number % 2 !== 0) console.log('number is odd')
+  }, [number])
+
+  React.useEffect(() => {
+    if (number !== 0 && number % 2 === 0) console.log('number is even')
+  }, [number])
+
   console.log('RENDER')
 
   return (
