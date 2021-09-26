@@ -15,7 +15,9 @@ export const App = () => {
         Class
       </h2>
       <CounterClass />
-      <CounterClass />
+      <CounterClass
+        startNumber={3}
+      />
     </div>
   )
 }

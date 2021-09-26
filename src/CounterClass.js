@@ -1,8 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export class CounterClass extends React.Component {
-  state = {
-    number: 5
+  constructor (props) {
+    super()
+
+    this.state = {
+      number: props.startNumber || 0
+    }
   }
 
   inc = () => this.setState((prevState) => ({ number: prevState.number + 1 }))
@@ -29,6 +34,10 @@ export class CounterClass extends React.Component {
       </>
     )
   }
+}
+
+CounterClass.propTypes = {
+  startNumber: PropTypes.number
 }
 
 export default CounterClass
